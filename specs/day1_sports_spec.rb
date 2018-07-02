@@ -13,9 +13,17 @@ class TestTeam < MiniTest::Test
 
 def test_in_team?
   no1 = Team.new("Ruby Duckies", "Jardine", "Mr. Head Coach",[], 0)
+  # player is in team
   no1.add_new_player("Dave")
   check = no1.in_team?("Dave")
+  p no1.team[0] + " is in the team"
   assert_equal(true, check)
+
+  # player isn't in team_name
+  no1.add_new_player("Dave")
+  check = no1.in_team?("Floyd")
+  p "Floyd isn't in the team"
+  assert_equal(false, check)
 end
 
 def test_calculate_points
