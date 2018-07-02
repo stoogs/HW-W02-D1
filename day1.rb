@@ -8,9 +8,8 @@ attr_writer :cohort, :name, :talk
    @talk = talk
  end
 
-def say_something(what_they_said)
-@talk = what_they_said
-
+def say_favourite_language(what_they_said)
+  @talk = "I Love " + what_they_said
 end
 
 
